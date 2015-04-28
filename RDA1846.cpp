@@ -915,4 +915,5 @@ uint16_t RDA1846::getChipID(void) {
 
 void RDA1846::reset(void) {
   writeWord(0x0001, REG_MODE);
+  writeWord(0x0000, REG_MODE);
 }
