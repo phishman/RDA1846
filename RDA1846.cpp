@@ -183,7 +183,7 @@ void RDA1846::rdaInit(void) {
   Serial.println("--DEBUG: rdaInit Print---");
 #endif
   for(int x=0; x<30; x++) {
-    writeWord(RDAinit[x].reg, RDAinit[x].data);
+    writeWord(RDAinit[x].data, RDAinit[x].reg);
 #ifdef DEBUGPRINT
     Serial.print(x);
 	Serial.print(":");
