@@ -311,6 +311,10 @@ uint16_t dtmfTone[10][2] = { //init values from http://elazary.com
   void setMode(uint16_t mode);
   uint16_t getMode(void);
   void setChannelMode(CHAN_MODE cmode);
+  void txOn(void);
+  void txOff(void);
+  void rxOn(void);
+  void rxOff(void);
   void setTxMode(bool cmode);
   void setRxMode(bool cmode);
   void setDeepSleep(bool cmode);

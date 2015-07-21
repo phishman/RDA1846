@@ -328,6 +328,38 @@ void RDA1846::setDeepSleep(bool cmode) {
   setMode(mode);
 }
 
+void RDA1846::txOn(void) {
+  uint16_t currmode;
+
+  readWord(&currmode, REG_MODE);
+  currmode |= 1 << 6;
+  writeWord(currmode, REG_MODE);
+}
+
+void RDA1846::txOff(void) {
+  uint16_t currmode;
+
+  readWord(&currmode, REG_MODE);
+  currmode ^= ~(1 << 6);
+  writeWord(currmode, REG_MODE);
+}
+
+void RDA1846::rxOn(void) {
+  uint16_t currmode;
+
+  readWord(&currmode, REG_MODE);
+  currmode |= 1 << 5;
+  writeWord(currmode, REG_MODE);
+}
+
+void RDA1846::rxOff(void) {
+  uint16_t currmode;
+
+  readWord(&currmode, REG_MODE);
+  currmode ^= ~(1 << 5);
+  writeWord(currmode, REG_MODE);
+}
+
 void RDA1846::setTxChannel(TX_VOICE_CHAN cmode) {
   uint16_t mode;
   
