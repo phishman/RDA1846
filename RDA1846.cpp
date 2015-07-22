@@ -340,7 +340,7 @@ void RDA1846::txOff(void) {
   uint16_t currmode;
 
   readWord(&currmode, REG_MODE);
-  currmode ^= ~(1 << 6);
+  currmode &= ~(1 << 6);
   writeWord(currmode, REG_MODE);
 }
 
@@ -356,7 +356,7 @@ void RDA1846::rxOff(void) {
   uint16_t currmode;
 
   readWord(&currmode, REG_MODE);
-  currmode ^= ~(1 << 5);
+  currmode &= ~(1 << 5);
   writeWord(currmode, REG_MODE);
 }
 
