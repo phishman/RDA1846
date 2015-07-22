@@ -58,7 +58,7 @@ void RDA1846::writeWord(uint16_t data, uint8_t reg) {
     Serial.print("writeWord -- ");
     Serial.print(_address);
 	Serial.print(":");
-	Serial.print(reg);
+	Serial.print(reg, HEX);
 	Serial.print(":");
 	if(data < 0x1000)
 	  Serial.print("0");
@@ -134,7 +134,7 @@ bool RDA1846::readWord(uint16_t *data, uint8_t reg) {
     Serial.print("readWord -- ");
     Serial.print(_address);
 	Serial.print(":");
-	Serial.print(reg);
+	Serial.print(reg, HEX);
 	Serial.print(":");
 	if(*data < 0x1000)
 	  Serial.print("0");
