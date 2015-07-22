@@ -244,8 +244,8 @@ void RDA1846::setFrequency(double freq) {  //Frequency in MHz Decimal okay. Auto
   writeWord(datau.w[1], REG_FREQ_H);
   writeWord(datau.w[0], REG_FREQ_L);
   
-  uint16_t tmp;
-  readWord(&tmp, REG_RF_BAND);
+  uint16_t tmp = 0x6b24;
+  //readWord(&tmp, REG_RF_BAND);
   if((freq >= 134.0) && (freq <= 174.0)) {
     bitSet(tmp, 1);
 	bitSet(tmp, 0);
