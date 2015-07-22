@@ -25,7 +25,7 @@
 */
 
 
-#include <wire.h>
+#include <Wire.h>
 
 #include <RDA1846.h>
 
