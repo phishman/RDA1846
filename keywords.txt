@@ -12,11 +12,11 @@ RDA1846	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin KEYWORD2
+begin	KEYWORD2
 
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-VER LITERAL1
+VER	LITERAL1
